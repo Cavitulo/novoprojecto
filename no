@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter Creator</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        .font-dancing {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .love-card {
+            box-shadow: 0 10px 30px -10px rgba(255, 105, 180, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .love-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px -10px rgba(255, 105, 180, 0.4);
+        }
+        
+        .heart-beat {
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-pink-50 font-poppins min-h-screen">
+    <div id="vanta-bg" class="fixed inset-0 z-0"></div>
+    
+    <div class="relative z-10 min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="py-6 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <i data-feather="heart" class="text-pink-500 heart-beat mr-2"></i>
+                    <h1 class="text-2xl font-bold text-pink-600 font-dancing">LoveLetter Creator</h1>
+                </div>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="text-pink-600 hover:text-pink-800 transition">Home</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-pink-600 transition">Templates</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-pink-600 transition">Gallery</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-pink-600 transition">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="flex-grow flex items-center py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-5xl md:text-6xl font-bold text-pink-700 mb-6 font-dancing">Create Your Perfect Love Letter</h2>
+                <p class="text-xl text-gray-700 mb-10 max-w-3xl mx-auto">Express your deepest feelings with our beautiful, customizable love letter templates.</p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
+                        <i data-feather="edit-2" class="inline mr-2"></i> Start Creating
+                    </button>
+                    <button class="bg-white hover:bg-gray-100 text-pink-600 px-8 py-3 rounded-full text-lg font-semibold transition-all transform hover:scale-105 border-2 border-pink-500 shadow-lg">
+                        <i data-feather="eye" class="inline mr-2"></i> View Examples
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Templates Section -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white bg-opacity-90">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-pink-700 mb-12 font-dancing">Beautiful Templates</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Template 1 -->
+                    <div class="love-card bg-white rounded-xl p-6">
+                        <div class="bg-gradient-to-r from-pink-100 to-pink-200 h-48 rounded-lg mb-4 flex items-center justify-center">
+                            <i data-feather="heart" class="text-pink-500 w-16 h-16"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">Classic Romance</h3>
+                        <p class="text-gray-600 mb-4">Timeless design perfect for anniversaries and special occasions.</p>
+                        <button class="bg-pink-100 hover:bg-pink-200 text-pink-700 px-4 py-2 rounded-lg w-full transition">
+                            Use this template
+                        </button>
+                    </div>
+                    
+                    <!-- Template 2 -->
+                    <div class="love-card bg-white rounded-xl p-6">
+                        <div class="bg-gradient-to-r from-red-100 to-red-200 h-48 rounded-lg mb-4 flex items-center justify-center">
+                            <i data-feather="mail" class="text-red-500 w-16 h-16"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Passionate Love</h3>
+                        <p class="text-gray-600 mb-4">For when you want to express your deepest, most intense feelings.</p>
+                        <button class="bg-red-100 hover:bg-red-200 text-red-700 px-4 py-2 rounded-lg w-full transition">
+                            Use this template
+                        </button>
+                    </div>
+                    
+                    <!-- Template 3 -->
+                    <div class="love-card bg-white rounded-xl p-6">
+                        <div class="bg-gradient-to-r from-purple-100 to-purple-200 h-48 rounded-lg mb-4 flex items-center justify-center">
+                            <i data-feather="feather" class="text-purple-500 w-16 h-16"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-purple-700 mb-2">Poetic Whisper</h3>
+                        <p class="text-gray-600 mb-4">Elegant and lyrical template for those who love poetry.</p>
+                        <button class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-4 py-2 rounded-lg w-full transition">
+                            Use this template
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-pink-50 bg-opacity-70">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-pink-700 mb-12 font-dancing">Why Choose Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i data-feather="edit-3" class="text-pink-500 w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">Easy to Use</h3>
+                        <p class="text-gray-600">Intuitive editor that makes creating beautiful letters a breeze.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i data-feather="palette" class="text-pink-500 w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">Customizable</h3>
+                        <p class="text-gray-600">Personalize every aspect to match your unique style.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i data-feather="download" class="text-pink-500 w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">Printable</h3>
+                        <p class="text-gray-600">Download and print high-quality versions of your letters.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white bg-opacity-90">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-pink-700 mb-12 font-dancing">Love Stories</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-pink-50 p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-pink-200 flex items-center justify-center mr-4">
+                                <i data-feather="user" class="text-pink-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-pink-700">Sarah & John</h4>
+                                <p class="text-sm text-gray-500">Married 2 years</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">"We used LoveLetter Creator for our anniversary and it made the moment so special. The template was beautiful and easy to customize."</p>
+                    </div>
+                    <div class="bg-pink-50 p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-pink-200 flex items-center justify-center mr-4">
+                                <i data-feather="user" class="text-pink-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-pink-700">Michael & Emma</h4>
+                                <p class="text-sm text-gray-500">Engaged</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">"I proposed with a love letter I created here. The poetic template was perfect and she said yes! Forever grateful for this wonderful tool."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-500 to-red-500 text-white">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 font-dancing">Ready to Express Your Love?</h2>
+                <p class="text-xl mb-8 max-w-3xl mx-auto">Create a beautiful love letter in minutes that will touch your loved one's heart.</p>
+                <button class="bg-white hover:bg-gray-100 text-pink-600 px-10 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
+                    <i data-feather="edit-2" class="inline mr-2"></i> Start Now - It's Free!
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <div class="flex items-center">
+                            <i data-feather="heart" class="text-pink-500 mr-2"></i>
+                            <h2 class="text-xl font-bold">LoveLetter Creator</h2>
+                        </div>
+                        <p class="text-gray-400 mt-2">Making love letters beautiful since 2023</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="heart"></i></a>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                    <p>© 2023 LoveLetter Creator. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Vanta.js background
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xff69b4,
+            backgroundColor: 0xfff0f5,
+            points: 12.00,
+            maxDistance: 22.00,
+            spacing: 18.00
+        });
+
+        // Initialize feather icons
+        feather.replace();
+        
+        // Simple animation for elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.love-card, .text-center');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

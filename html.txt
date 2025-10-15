@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Love Letter</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+        
+        .font-dancing {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .letter-paper {
+            background-image: url('http://static.photos/vintage/1200x630/42');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-pink-50 min-h-screen">
+    <div class="container mx-auto py-12 px-4">
+        <div class="max-w-3xl mx-auto">
+            <div class="letter-paper p-8 md:p-12 rounded-lg mb-8">
+                <div class="backdrop-blur-sm bg-white/70 p-8 rounded">
+                    <h1 class="text-3xl md:text-4xl font-bold text-center text-pink-700 mb-8 font-dancing">My Love Letter</h1>
+                    <div class="prose max-w-none text-gray-800">
+                        <p class="mb-4">My Dearest,</p>
+                        <p class="mb-4">Every moment with you is like a beautiful dream I never want to wake up from.</p>
+                        <p class="mb-4">Your smile brightens my darkest days, your laugh is my favorite melody.</p>
+                        <p class="mb-4">I cherish the way you [specific quality], and how you [specific action].</p>
+                        <p class="mb-8">Forever yours,</p>
+                        <p>Your Name</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-between">
+                <button class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-lg transition">
+                    <i data-feather="edit" class="inline mr-2"></i> Edit Letter
+                </button>
+                <button class="bg-white hover:bg-gray-100 text-pink-600 px-6 py-2 rounded-lg border border-pink-500 transition">
+                    <i data-feather="download" class="inline mr-2"></i> Download PDF
+                </button>
+                <button class="bg-white hover:bg-gray-100 text-pink-600 px-6 py-2 rounded-lg border border-pink-500 transition">
+                    <i data-feather="share-2" class="inline mr-2"></i> Share Online
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html> 
